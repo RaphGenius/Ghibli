@@ -1,0 +1,17 @@
+.Fullcard {
+  width: 250px;
+  height: 500px;
+  border: 2px solid black;
+
+  .container-img {
+    display: flex;
+    justify-content: center;
+
+    .__img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
