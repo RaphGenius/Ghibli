@@ -15,7 +15,7 @@ function App() {
   }, []);
   //Render
   return (
-    <div>
+    <div className="body">
       <Header />
       <div className="container-card">
         {movies.map((movie) => (

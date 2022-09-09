@@ -1,17 +1,136 @@
-.Fullcard {
+/* .Fullcard {
   width: 250px;
-  height: 500px;
-  border: 2px solid black;
-
+  margin: 20px;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0) 3%,
+    rgba(77, 166, 184, 1) 100%
+  );
+  transition: 0.2s ease-in-out;
+  box-shadow: 0px 0px 20px $basicColor;
+  border-radius: 20px;
+  // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); quand vue
+  &:hover {
+    transform: scale(1.1);
+  }
   .container-img {
     display: flex;
     justify-content: center;
+    margin: 20px 0px 20px;
 
     .__img {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 350px;
       object-fit: cover;
       border-radius: 5px;
     }
+  }
+  .container-title {
+    text-align: center;
+    margin-bottom: 20px;
+    .__title {
+      font-size: $FontSizeTitle;
+      font-family: $fontTitle;
+      color: $basicColor;
+      font-weight: 800;
+    }
+    .__releasedate {
+      margin-top: 10px;
+      color: $ColorrSecondary;
+      font-weight: 800;
+    }
+  }
+}
+ */
+// CARTE QUI RETOURNE QUI MARCHE
+/* .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+  border: 2px solid black;
+
+  &:hover {
+    .card {
+      transform: scale(1.2);
+    }
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+.card {
+  transition: 0.5s ease;
+  position: absolute;
+  font-size: 20px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+  background-color: red;
+}
+ */
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  transition: 200ms ease;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0) 3%,
+    rgba(77, 166, 184, 1) 100%
+  );
+  border-radius: 20px;
+  .card {
+    position: absolute;
+    transition: 200ms ease;
+  }
+  .front,
+  .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+  &:hover {
+    transform: scale(1.1);
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0);
+    }
+  }
+  .img-container {
+    padding: 20px 10px;
+    width: auto;
+    height: auto;
+    .__img {
+      object-fit: cover;
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+    }
+  }
+}
+.movie_title {
+  font-family: $fontTitle;
+  color: $basicColor;
+  width: 100%;
+  text-align: center;
+  .__title {
+    font-size: 20px;
   }
 }
