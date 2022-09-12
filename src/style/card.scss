@@ -51,8 +51,11 @@
   color: $basicColor;
   width: 100%;
   text-align: center;
+  margin-top: 10px;
   .__title {
     font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 5px;
   }
 }
 .description {
@@ -60,15 +63,14 @@
   padding: 10px;
   color: $basicColor;
 
-  max-height: 60%;
+  max-height: 220px;
   overflow: hidden;
 
   p {
     margin-bottom: 5px;
   }
 }
-.container_back {
-}
+
 .btn-part {
   position: absolute;
   height: auto;
@@ -77,6 +79,7 @@
   bottom: 40px;
   flex-direction: column;
   .btn {
+    cursor: pointer;
     font-family: $fontTitle;
     text-align: center;
     border-bottom: 2px solid $basicColor;
@@ -84,9 +87,45 @@
     font-size: 20px;
     padding: 2px 5px;
     border-radius: 10px;
-    color: $ColorrSecondary;
+    font-weight: 800;
+    color: $ColorTertiary;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      background-color: $ColorTertiary;
+      color: $ColorPrimary;
+      transform: scale(1.1);
+      border-left: 2px solid $basicColor;
+      border-right: 2px solid $basicColor;
+    }
   }
   button:first-child {
     margin-bottom: 10px;
   }
+}
+
+.container-check {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  right: 15px;
+  input {
+    visibility: hidden;
+  }
+  label {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: $ColorrSecondary;
+    &:hover {
+      background-color: $basicColor;
+    }
+  }
+}
+.bg_other {
+  background: radial-gradient(
+    circle,
+    rgb(224, 77, 141) 0%,
+    rgb(60, 138, 226) 100%
+  );
 }

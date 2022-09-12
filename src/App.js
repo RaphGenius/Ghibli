@@ -6,9 +6,10 @@ const axios = require("axios").default;
 function App() {
   //State
   const [movies, setMovies] = useState([]);
+
   // Comportement
   useEffect(() => {
-    axios.get("https://ghibliapi.herokuapp.com/films").then((res) => {
+    axios.get("https://ghibliapi.herokuapp.com/films").then(async (res) => {
       console.log(res.data);
       setMovies(res.data);
     });
